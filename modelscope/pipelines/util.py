@@ -32,7 +32,8 @@ def is_official_hub_path(path: Union[str, List],
             return osp.exists(cfg_file)
         else:
             try:
-                _ = HubApi().get_model(path, revision=revision)
+                # disable network access
+                # _ = HubApi().get_model(path, revision=revision)
                 return True
             except Exception as e:
                 raise ValueError(f'invalid model repo path {e}')

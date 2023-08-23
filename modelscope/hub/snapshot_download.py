@@ -25,7 +25,7 @@ def snapshot_download(model_id: str,
                       revision: Optional[str] = DEFAULT_MODEL_REVISION,
                       cache_dir: Union[str, Path, None] = None,
                       user_agent: Optional[Union[Dict, str]] = None,
-                      local_files_only: Optional[bool] = False,
+                      local_files_only: Optional[bool] = True,
                       cookies: Optional[CookieJar] = None,
                       ignore_file_pattern: List = None) -> str:
     """Download all files of a repo.
